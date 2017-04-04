@@ -1,0 +1,432 @@
+/*
+ * This code is done using html5boilerplate, bootstrap 4 and other fixes.
+ * We at dzineden use this code as the base for our websites and apps,
+ */
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html {font-size: 1em; }
+
+body {
+  background-color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #444;
+}
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+p {margin-bottom: 1.3em;}
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  font-weight:300;
+}
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+h2 {font-size: 2.369em;}
+h3 {font-size: 1.777em;}
+h4 {font-size: 1.333em;}
+small, .font_small {font-size: 0.75em;}
+
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.container:after {
+  display: block;
+  clear: both;
+  content:""
+}
+
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    max-width: 100%;
+  }
+}
+
+
+/*=====================================
+=            Header styles            =
+=====================================*/
+
+.site-header{
+  background-color: #1976d2;
+}
+.logo{
+  float: left;
+}
+.logo img{
+  position: absolute;
+  top: 15px;
+  left:15px;
+  border-radius: 0 10px 10px;
+  width:75px;
+  height:auto;
+}
+.logo h1,
+.logo > div{
+  font-size:1.4rem;
+  color:#FFF;
+  margin:15px 0 5px 80px;
+}
+.logo h1 small,
+.logo > div > small{
+  font-size:.8rem;
+  display: block;
+}
+@media (min-width:768px) {
+  .logo img{
+    width:125px;
+  }
+  .logo h1,
+  .logo > div{
+    font-size:2.2rem;
+    margin-left:135px;
+  }
+  .logo h1 small,
+  .logo > div > small{
+    font-size:1rem;
+  }
+}
+.site-nav{
+  position: relative;
+  float: right;
+}
+.site-nav ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+@media (max-width:991px){
+  .ham{
+    width:30px;
+    height:25px;
+    margin-top: 15px;
+    border: solid 1px white;
+    border-radius:2px;
+    position: relative;
+    cursor: pointer;
+  }
+  .ham span{
+   width:80%;
+   height:3px;
+   background-color: #FFF;
+   position: absolute;
+   left:0;right:0;
+   margin-left: auto;margin-right: auto;
+  }
+  .ham span:first-child{top:4px }
+  .ham span:nth-child(2){top:10px }
+  .ham span:last-child{top:16px }
+  .site-nav ul{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.5);
+    width:220px;
+    top:46px;
+    right:-15px;
+    display: none;
+  }
+  .site-nav ul li{}
+  .site-nav ul li a{
+    display: block;
+    padding: 0 10px;
+    line-height: 30px;
+    color:#444;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: solid 1px #ccc;
+  }
+  .site-nav ul li.selected a,
+  .site-nav ul li a:hover{
+    color:#FFF;
+    background-color: #4caf50;
+  }
+} /* eo media */
+@media (min-width:992px){
+  .ham{display: none;  }
+  .site-nav ul{
+    display: block !important;
+  }
+  .site-nav ul li{
+    float: left;
+  }
+  .site-nav ul li a{
+    color:#FFF
+  }
+
+} /* eo media */
+
+/*=====  End of Header styles  ======*/
+
+
+.item-wrap{
+  width:25%;
+  padding:25px;
+  float: left;
+}
+.item{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  border: solid 1px #ccc;
+}
+
+.item img {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden {
+    display: none !important;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+.invisible {
+    visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    p:first-letter,
+    div:first-letter,
+    blockquote:first-letter,
+    li:first-letter,
+    p:first-line,
+    div:first-line,
+    blockquote:first-line,
+    li:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
