@@ -378,6 +378,11 @@ small, .font_small {font-size: 0.75em;}
     height: auto;
 }
 
+/*----------  Banner images  ----------*/
+.banner{
+  margin-bottom: 20px;
+}
+.banner img {width:100%}
 
 
 /* ==========================================================================
