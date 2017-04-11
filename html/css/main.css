@@ -106,7 +106,9 @@ small, .font_small {font-size: 0.75em;}
   line-height: 1.1;
 }
 
-
+.alternate-bg{
+  background-color: #FFECAC;
+}
 .container {
   position: relative;
   margin-left: auto;
@@ -148,7 +150,14 @@ small, .font_small {font-size: 0.75em;}
     max-width: 100%;
   }
 }
-
+.one-half{}
+@media (min-width:768px) {
+  .one-half{
+    float: left;
+    width:50%;
+    padding:0 15px;
+  }
+}
 
 /*=====================================
 =            Header styles            =
@@ -383,6 +392,75 @@ small, .font_small {font-size: 0.75em;}
   margin-bottom: 20px;
 }
 .banner img {width:100%}
+
+/*----------  form-wrap  ----------*/
+.form-wrap {
+  clear:both;
+  width:55%;
+  background-color: #D6E4FF;
+  padding:20px;
+  margin:20px auto;
+  border-radius:10px;
+}
+.form-row {
+  background-color: #FFF;
+  padding:10px;
+  margin-bottom:1px;
+}
+.form-row:after {
+  content:"";
+  display: block;
+  clear: both;
+}
+.form-row label {
+  width:120px;
+  float: left;
+  text-align: right;
+  line-height: 30px;
+  font-size:14px;
+  text-transform: uppercase;
+  color:#777;
+  margin-right: 10px;
+}
+.form-row .input-wrap {
+  margin-left: 130px;
+}
+.form-row select,
+.form-row input {
+  width:100%;
+  border: solid 1px #C5C5C5;
+  border-radius:4px;
+  padding:5px 8px;
+  color:#555;
+}
+.form-row input:focus {
+  border-color: blue;
+  border-radius:4px;
+  box-shadow: 0 0 3px 1px rgba(0,0,255,.5);
+}
+.form-row input:invalid,
+.form-row input.error {
+  border-color: red;
+  border-radius:4px;
+  box-shadow: 0 0 3px 1px rgba(255,0,0,.5);
+  color:red;
+}
+
+/*----------  About section  ----------*/
+
+@media (min-width:768px) {
+  .about h2,
+  .about .lead{
+    text-align: center;
+  }
+  .about h2{
+    padding: 0 10%;
+  }
+  .about .lead{
+    padding: 0 25%;
+  }
+}
+
 
 
 /* ==========================================================================
